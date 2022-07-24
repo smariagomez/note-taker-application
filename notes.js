@@ -1,33 +1,36 @@
-const express = require ('express');
+const express = require('express');
 const router = express.Router();
-const fs = require ('fs');
+const fs = require('fs');
+const uuid = require('./helpers/uuid');
 
 router.get("/", (req, res) => {
-    fs.readFile("./users.json", "utf8", (err, data) => {
+    fs.readFile("./db/db.json", "utf8", (err, data) => {
       if (err) {
         throw err;
       } else {
-        const users = JSON.parse(data);
-        res.json(users);
+        const notes = JSON.parse(data);
+        res.json(notes);
       }
     });
   });
   
   router.post("/", (req, res) => {
     console.log(req.body);
-    const newUser = {
+    const newNote = {
       title: req.body.title,
-      test: req.body.text,
+      text: req.body.text,
+      //note_id: uuid(),
+      //id: req.body.id,
     };
-    fs.readFile("./users.json", "utf8", (err, data) => {
+    fs.readFile("./db/db.json", "utf8", (err, data) => {
       if (err) {
         throw err;
       } else {
-        const users = JSON.parse(data);
-        users.push(newUser);
+        const notes = JSON.parse(data);
+        users.push(newNote);
         fs.writeFile(
-          "./users.json",
-          JSON.stringify(users, null, 4),
+          "./db/db.json",
+          JSON.stringify(notes, null, 4),
           (err, data) => {
             if (err) {
               throw err;

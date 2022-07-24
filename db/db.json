@@ -1,6 +1,22 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title":"Homework Assignment",
+        "text":"install UUID",
+        "note_id": "uuid()"
+    },
+    {
+        "title":"Pick up coffee beans",
+        "text":"Try Union Coffee first",
+        "note_id": "uuid()"
+    },
+    {
+        "title":"Call for insurance estimates",
+        "text":"EST",
+        "note_id": "uuid()"
+    },
+    {
+        "title":"Take car in",
+        "text":"Call Carter Sub to set up a time",
+        "note_id": "uuid()"
     }
 ]

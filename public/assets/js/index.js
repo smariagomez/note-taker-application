@@ -1,6 +1,14 @@
-const express = require("express");
-const router = express.Router();
-const fs =require(fs);
+//const uuid = require('./helpers/uuid');
+
+// fetch("/api/notes").then(res=>res.json()).then(data=>{
+//   console.log(data);
+//   data.forEach(note=>{
+//       const newLi = document.createElement("li");
+//       newLi.textContent = note.title;
+//       document.querySelector(".list-group").append(newLi)
+//   })
+// })
+
 
 let noteTitle;
 let noteText;
@@ -74,6 +82,7 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
+    //note_id: uuid()
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
