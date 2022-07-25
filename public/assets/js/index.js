@@ -1,14 +1,3 @@
-//const uuid = require('./helpers/uuid');
-
-// fetch("/api/notes").then(res=>res.json()).then(data=>{
-//   console.log(data);
-//   data.forEach(note=>{
-//       const newLi = document.createElement("li");
-//       newLi.textContent = note.title;
-//       document.querySelector(".list-group").append(newLi)
-//   })
-// })
-
 
 let noteTitle;
 let noteText;
@@ -77,13 +66,15 @@ const renderActiveNote = () => {
     noteText.value = '';
   }
 };
-
+//added id: uuid() to starter code, not sure where it belongs
 const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
-    //note_id: uuid()
+    //id: uuid()
   };
+
+  
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();

@@ -1,22 +1,22 @@
 [
     {
-        "title":"Homework Assignment",
-        "text":"install UUID",
-        "note_id": "uuid()"
+        "title": "Coffee Beans",
+        "text": "Try Union Coffee first",
+        "id": "371"
     },
     {
-        "title":"Pick up coffee beans",
-        "text":"Try Union Coffee first",
-        "note_id": "uuid()"
+        "title": "Car Repair",
+        "text": "Call Carter Subaru to set up an appt",
+        "id": "c19"
     },
     {
-        "title":"Call for insurance estimates",
-        "text":"EST",
-        "note_id": "uuid()"
+        "title": "Sign up for insurance",
+        "text": "Wednesday at the latest",
+        "id": "987"
     },
     {
-        "title":"Take car in",
-        "text":"Call Carter Sub to set up a time",
-        "note_id": "uuid()"
+        "title": "Note to delete",
+        "text": "I'm going to delete this",
+        "id": "5cc"
     }
 ]
