@@ -14,8 +14,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //app.use('api', api);
 
-// const allRoutes = require("./notes")
-// app.use(allRoutes);
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/index.html"));
