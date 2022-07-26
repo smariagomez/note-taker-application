@@ -33,7 +33,7 @@ app.get('/api/notes', (req, res) => {
     });
 });
 
-//res.json(notesData));
+
 app.post("/api/notes", (req, res) => {
     fs.readFile("./db/db.json", "utf8", (err, data) => {
         if (err) {
@@ -62,7 +62,7 @@ app.post("/api/notes", (req, res) => {
         }
     })
 });
-
+//delete item code is not functional yet
 app.delete("/api/notes", (req, res) => {
     fs.readFile("./db/db.json", "utf8", (err, data) => {
         if (err) {

@@ -18,5 +18,10 @@
         "title": "Note to delete",
         "text": "I'm going to delete this",
         "id": "5cc"
+    },
+    {
+        "title": "Complete README",
+        "text": "To be completed by 6pm on 7/25",
+        "id": "8c0"
     }
 ]
