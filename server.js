@@ -63,27 +63,27 @@ app.post("/api/notes", (req, res) => {
     })
 });
 //delete item code is not functional yet
-app.delete("/api/notes", (req, res) => {
-    fs.readFile("./db/db.json", "utf8", (err, data) => {
-        if (err) {
-            throw err;
-        } else {
-            const note = JSON.parse(data)
-            const identification = req.params.id;
-            const currentNotes = note.filter(note => note.id !==identification)
-                fs.writeFile(
-                    "./db/db.json",
-                    JSON.stringify(currentNotes, null, 4),
-                    (err, data) => {
-                        if (err) {
-                            throw err;
-                        }
-                        res.json({ data: req.body, message: "success!" });
-                    }
-                )
-            }
-        })
-    });
+// app.delete("/api/notes", (req, res) => {
+//     fs.readFile("./db/db.json", "utf8", (err, data) => {
+//         if (err) {
+//             throw err;
+//         } else {
+//             const note = JSON.parse(data)
+//             const identification = req.params.id;
+//             const currentNotes = note.filter(note => note.id !==identification)
+//                 fs.writeFile(
+//                     "./db/db.json",
+//                     JSON.stringify(currentNotes, null, 4),
+//                     (err, data) => {
+//                         if (err) {
+//                             throw err;
+//                         }
+//                         res.json({ data: req.body, message: "success!" });
+//                     }
+//                 )
+//             }
+//         })
+//     });
 
 app.listen(PORT, () => {
     console.log(`listening at http://localhost:${PORT}`);
